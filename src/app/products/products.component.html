@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-3 m-2">
+      <product-filter [category]="category"></product-filter>
+    </div>
+    <div class="col">
+      <div *ngIf="cart$ | async as cart" class="row">
+        <div *ngFor="let product of filteredProducts" class="col-lg-4 col-md-9">
+          <product-card [product]="product" [shopping-cart]="cart"></product-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

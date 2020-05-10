@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Order</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="orders$ | async as orders">
+          <tr *ngFor="let order of orders">
+            <td>{{order.shipping.name}}</td>
+            <td>{{order.datePlace|date}}</td>
+            <td><a href="">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
