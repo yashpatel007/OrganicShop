@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-
+  // your firebase cred here
+  // firebase:{
+  // ...
+  //}
 };
 
 /*
